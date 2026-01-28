@@ -8,4 +8,4 @@ Z = 1
 P = Rf.P1s(r,Z)
 plt.plot(r,P)
 plt.show
-plt.savefig(P1s.png)
+plt.savefig('P1s.png')
