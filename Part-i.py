@@ -80,14 +80,26 @@ data={"Analytical Energies":ana_energies,
 df=pd.DataFrame(data) #creating dataframe
 print(df)
 
-
-
-
-
-
- 
-
-
 #task 4
+#dr = r[1]-r[0]
+#r_expectation_value = sum(r*P**2)*dr
+
+n = [1,2,3,4]
+for i in n:
+    r,P,E=rad.radial(l,i,Z)
+    dr = r[1]-r[0]
+    r_expectation_value = sum(r*P**2)*dr
+    print(f"Radial expectation value for n={i} is {r_expectation_value}")
+    
+    plt.subplots(2,2)
+    plt.subplot(2,2,n.index(i)+1)
+    plt.plot(r,P**2)
+    plt.vlines(r_expectation_value, ymin=0, ymax=max(P**2), colors='r', linestyles='dashed', label='<r>')
+    plt.title(f"Radial Probability Density for n={i}, l={l}\n<r>={r_expectation_value:.2f}")
+    plt.xlabel("r")
+    plt.ylabel("Radial Probability Density")
+plt.tight_layout()
+plt.savefig("radial_probability_n1-4_l0.png")
+plt.close()
 
 
