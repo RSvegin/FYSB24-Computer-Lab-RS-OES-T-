@@ -68,7 +68,7 @@ for i in n:
     rad_gridpoints.append(10000)
     radlog_gridpoints.append(grid_points)
     ana_energies.append(-Z**2/(2*i**2))
-    
+
 
 data={"Analytical Energies":ana_energies,
       "Radial Energies":rad_energies,
@@ -77,6 +77,8 @@ data={"Analytical Energies":ana_energies,
       "RadialLog Grid Points":radlog_gridpoints}
 df=pd.DataFrame(data) #creating dataframe
 print(df)
+
+
 
 
 
