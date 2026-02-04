@@ -64,3 +64,13 @@ for i in n:
 
 gridpoints=np.linspace(1,10000,1)
 
+plt.plot(n,rad_energies,'o-')
+plt.plot(n,radlog_energies,'o-')
+plt.legend(["radial","radiallog"])
+plt.savefig("energies_comparison.png")
+
+
+#task 4
+dr[1]-dr[0]
+r_expectation_value=sum(r*P**2) * dr
+
