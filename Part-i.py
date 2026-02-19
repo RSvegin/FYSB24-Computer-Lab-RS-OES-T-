@@ -10,20 +10,24 @@ Z = 1
 
 
 # Commenting out previous radial density plots
-# P = Rf.P1s(r,Z)
-# P3s=Rf.P3s(r,Z)
-# P3p=Rf.P3p(r,Z)
-# P3d=Rf.P3d(r,Z)
+P = Rf.P1s(r,Z)
+P3s=Rf.P3s(r,Z)
+P3p=Rf.P3p(r,Z)
+P3d=Rf.P3d(r,Z)
 
 # radial density plots
-
-# plt.plot(r,P)
-# plt.plot(r,P3s)
-# plt.plot(r,P3p)
-# plt.plot(r,P3d)
-# plt.legend(["p","p3s","p3p","p3d"])
-# plt.show()
-# plt.savefig('P1s.png')
+'''
+plt.plot(r,P)
+plt.plot(r,P3s)
+plt.plot(r,P3p)
+plt.plot(r,P3d)
+plt.xlabel("r (a.u.)")
+plt.ylabel("P(r)")
+plt.title("Radial Density Functions for 1s, 3s, 3p, 3d")
+plt.legend(["p","p3s","p3p","p3d"])
+plt.show()
+plt.savefig('P1s.png')
+'''
 
 # task 2
 # effective potential
@@ -37,12 +41,17 @@ Vd=V(r,2)
 Vs=np.clip(Vs,-2,1)
 Vp=np.clip(Vp,-2,1)
 Vd=np.clip(Vd,-2,1)
-# plt.plot(r,Vs)
-# plt.plot(r,Vp)
-# plt.plot(r,Vd)
-# plt.legend(["Vs","Vp","Vd"])
-# plt.show,plt.savefig("effective_potential")
-
+'''
+plt.plot(r,Vs)
+plt.plot(r,Vp)
+plt.plot(r,Vd)
+plt.xlabel("r (a.u.)")
+plt.ylabel("V_eff(r)")
+plt.title("Effective Potential for l=0,1,2")
+plt.legend(["Vs","Vp","Vd"])
+plt.show()
+plt.savefig("effective_potential")
+'''
 #testing radial function
 l=0
 n=1
